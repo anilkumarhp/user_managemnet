@@ -1,11 +1,11 @@
 [tool.black]
 line-length = 88
-target-version = ['py313']
+target-version = ['py312']
 include = '\.pyi?$'
 
 [tool.bandit]
 exclude_dirs = ["tests"]
-targets = ["user_managemnet"]
+targets = ["app", "test"]
 
 [tool.isort]
 profile = "black"
@@ -17,7 +17,7 @@ ensure_newline_before_comments = true
 line_length = 88
 sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
 # Define your project's packages here
-known_first_party = ["app"]  # Add your project package names
+known_first_party = ["user_management"]  # Fixed typo
 # You can specify third-party packages if needed
 known_third_party = ["requests", "fastapi"]  # Add your third-party packages
 # Default section for unknown imports
