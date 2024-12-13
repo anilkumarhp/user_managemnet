@@ -10,6 +10,12 @@ async def health_check():
     return {'status': 'ok'}
 
 
+@app.get('/health1')
+async def health_check1():
+    """Return app status."""
+    return {'status': 'ok'}
+
+
 if __name__ == '__main__':
     # Third Party
     import uvicorn
